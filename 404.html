@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>頁面未找到 - 冠金環保有限公司</title>
+    <meta name="description" content="抱歉，您訪問的頁面不存在。冠金環保有限公司專業廢棄物清理服務，擁有丙級清理執照，服務中彰投雲苗地區。">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon_rounded.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_rounded.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_rounded.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_rounded.ico">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+        }
+        
+        .error-container {
+            text-align: center;
+            max-width: 600px;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 1px solid #e9ecef;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: #2c5530;
+            margin: 0;
+            line-height: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #333;
+            margin: 20px 0 15px 0;
+        }
+        
+        .error-message {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .btn-home {
+            background: #2c5530;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-home:hover {
+            background: #1e3a21;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(44, 85, 48, 0.3);
+        }
+        
+        .btn-contact {
+            background: transparent;
+            color: #2c5530;
+            padding: 15px 30px;
+            border: 2px solid #2c5530;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-contact:hover {
+            background: #2c5530;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .helpful-links {
+            border-top: 1px solid #e9ecef;
+            padding-top: 30px;
+        }
+        
+        .helpful-links h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .help-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        .help-link:hover {
+            background: #2c5530;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .help-link i {
+            color: #2c5530;
+            transition: color 0.3s ease;
+        }
+        
+        .help-link:hover i {
+            color: white;
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .floating-icon {
+            position: absolute;
+            color: rgba(44, 85, 48, 0.1);
+            font-size: 2rem;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-icon:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-icon:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+        
+        .floating-icon:nth-child(3) {
+            bottom: 30%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .error-container {
+                padding: 40px 20px;
+                margin: 20px;
+            }
+            
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-home, .btn-contact {
+                width: 100%;
+                max-width: 250px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="floating-elements">
+            <i class="fas fa-recycle floating-icon"></i>
+            <i class="fas fa-leaf floating-icon"></i>
+            <i class="fas fa-truck floating-icon"></i>
+        </div>
+        
+        <div class="error-container">
+            <div class="error-code">404</div>
+            <h1 class="error-title">頁面未找到</h1>
+            <p class="error-message">
+                抱歉，您要查找的頁面不存在或已被移動。<br>
+                請檢查網址是否正確，或使用下方的連結返回網站。
+            </p>
+            
+            <div class="error-actions">
+                <a href="index.html" class="btn-home">
+                    <i class="fas fa-home"></i>
+                    返回首頁
+                </a>
+                <a href="index.html#contact" class="btn-contact">
+                    <i class="fas fa-phone"></i>
+                    聯絡我們
+                </a>
+            </div>
+            
+            <div class="helpful-links">
+                <h3>您可能想要：</h3>
+                <div class="links-grid">
+                    <a href="index.html#services" class="help-link">
+                        <i class="fas fa-list"></i>
+                        <span>查看服務項目</span>
+                    </a>
+                    <a href="evaluate.html" class="help-link">
+                        <i class="fas fa-calculator"></i>
+                        <span>免費線上估價</span>
+                    </a>
+                    <a href="license.html" class="help-link">
+                        <i class="fas fa-certificate"></i>
+                        <span>執照資訊</span>
+                    </a>
+                    <a href="index.html#about" class="help-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>關於我們</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- LINE 浮動按鈕 -->
+    <div class="line-float-btn">
+        <a href="https://line.me/R/ti/p/@795ypdjw" target="_blank" title="LINE聯絡我們">
+            <i class="fab fa-line"></i>
+        </a>
+    </div>
+    
+    <script>
+        // 自動返回首頁計時器（可選）
+        let countdown = 10;
+        const countdownElement = document.createElement('div');
+        countdownElement.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(44, 85, 48, 0.9);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        `;
+        
+        function updateCountdown() {
+            if (countdown > 0) {
+                countdownElement.textContent = `${countdown}秒後自動返回首頁`;
+                countdown--;
+                setTimeout(updateCountdown, 1000);
+            } else {
+                window.location.href = 'index.html';
+            }
+        }
+        
+        // 取消自動跳轉功能，讓用戶手動選擇
+        // document.body.appendChild(countdownElement);
+        // updateCountdown();
+    </script>
+</body>
+</html>

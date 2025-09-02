@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>免費線上估價 - 冠金環保有限公司</title>
+    <meta name="description" content="冠金環保有限公司提供免費線上估價服務，專業廢棄物清理，擁有丙級清理執照，服務中彰投雲苗地區。">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon_rounded.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_rounded.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_rounded.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_rounded.ico">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+    <!-- 導航欄 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <h2>冠金環保有限公司</h2>
+                    <span>專業廢棄物清理</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="index.html#services">服務項目</a></li>
+                <li><a href="index.html#about">關於我們</a></li>
+                <li><a href="license.html">執照資訊</a></li>
+                <li><a href="index.html#contact">聯絡我們</a></li>
+                <li><a href="evaluate.html" class="quote-btn active">免費估價</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 頁面標題 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>免費線上估價</h1>
+            <p>填寫以下表單，我們將盡快回復您，為您提供專業估價</p>
+        </div>
+    </section>
+
+    <!-- 估價表單 -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-form-container">
+                <form class="quote-form" id="quoteForm" action="https://formspree.io/f/mwpnrklz" method="POST">
+                    <input type="hidden" name="_subject" value="冠金環保 - 免費線上估價申請">
+                    <input type="hidden" name="_next" value="index.html?success=true">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">姓名 *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">聯絡電話 *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">電子郵件</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">服務地址 *</label>
+                            <input type="text" id="location" name="location" placeholder="請輸入詳細地址" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service-type">服務類型 *</label>
+                        <select id="service-type" name="service-type" required>
+                            <option value="">請選擇服務類型</option>
+                            <option value="house-clearing">房屋買賣清空</option>
+                            <option value="renovation-removal">裝潢拆除清運</option>
+                            <option value="general-waste">一般事業廢棄物清除</option>
+                            <option value="wood-waste">廢木材清運</option>
+                            <option value="permit-service">許可證申辦業務</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="items">廢棄物項目</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="items" value="furniture">
+                                <span>家具</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="items" value="appliances">
+                                <span>家電</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="items" value="electronics">
+                                <span>電子產品</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="items" value="clothes">
+                                <span>衣物</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="items" value="books">
+                                <span>書籍文件</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="items" value="other">
+                                <span>其他</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">詳細描述</label>
+                        <textarea id="description" name="description" rows="3" placeholder="請詳細描述需要清理的物品、數量、特殊要求等..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preferred-date">希望服務日期</label>
+                        <input type="date" id="preferred-date" name="preferred-date">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">送出估價申請</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服務特色 -->
+    <section class="evaluate-features">
+        <div class="container">
+            <h2>為什麼選擇我們的估價服務</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>免費估價</h3>
+                        <p>完全免費的線上估價服務，無任何隱藏費用</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>到府服務</h3>
+                        <p>專業人員到府實地評估，提供精準報價</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>快速回應</h3>
+                        <p>24小時內回覆您的估價申請</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>合法執照</h3>
+                        <p>擁有丙級清理執照，合法經營有保障</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>專業技術</h3>
+                        <p>乙級技術人員提供專業指導與服務</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>誠信服務</h3>
+                        <p>價格透明，誠信經營，讓您放心委託</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>冠金環保有限公司</h3>
+                    <p>專業廢棄物清理服務</p>
+                    <p>113南投縣廢丙清字第0019號</p>
+                </div>
+                <div class="footer-section">
+                    <h4>服務項目</h4>
+                    <ul>
+                        <li>房屋買賣清空</li>
+                        <li>裝潢拆除清運</li>
+                        <li>一般事業廢棄物清除</li>
+                        <li>廢木材清運</li>
+                        <li>許可證申辦業務</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>服務區域</h4>
+                    <ul>
+                        <li>台中市</li>
+                        <li>彰化縣</li>
+                        <li>南投縣</li>
+                        <li>雲林縣</li>
+                        <li>苗栗縣</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>聯絡資訊</h4>
+                    <p>服務專線：<a href="tel:0986832020" class="footer-link">0986-832-020</a></p>
+                    <p>信箱：<a href="mailto:gj.environt@gmail.com" class="footer-link">gj.environt@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 冠金環保有限公司. 版權所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LINE 浮動按鈕 -->
+    <div class="line-float-btn">
+        <a href="https://line.me/R/ti/p/@795ypdjw" target="_blank" title="LINE聯絡我們">
+            <i class="fab fa-line"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
