@@ -18,6 +18,203 @@ body {
     padding: 0 20px;
 }
 
+/* 公告模態框 */
+.notice-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(2px);
+}
+
+.notice-modal {
+    background: white;
+    border-radius: 20px;
+    padding: 0;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.5s ease-out;
+    border: 3px solid #e74c3c;
+}
+
+.notice-header {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 30px 40px;
+    border-radius: 17px 17px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.notice-header i {
+    font-size: 2rem;
+    animation: pulse 2s infinite;
+}
+
+.notice-header h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.notice-body {
+    padding: 40px;
+    background: white;
+    border-radius: 0 0 17px 17px;
+}
+
+.notice-body p {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0 0 30px 0;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.contact-developer {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 20px;
+    border: 2px solid #e9ecef;
+}
+
+.contact-developer h4 {
+    color: #2c5530;
+    font-size: 1.2rem;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-developer h4 i {
+    color: #e74c3c;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 12px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item i {
+    color: #2c5530;
+    font-size: 1.1rem;
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+}
+
+.contact-item span {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    line-height: 1;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background: #f8f9fa;
+}
+
+.contact-link:active {
+    transform: translateY(0);
+}
+
+.contact-note {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.7) translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* 禁用頁面其他地方的點擊 */
+body {
+    pointer-events: none;
+}
+
+.notice-overlay {
+    pointer-events: auto;
+}
+
+.notice-modal {
+    pointer-events: auto;
+}
+
 /* 導航欄 */
 .navbar {
     background: #fff;
@@ -908,8 +1105,94 @@ body {
     margin: 0;
 }
 
-/* 響應式設計 */
+/* 響應式設計 - 手機版 */
 @media (max-width: 768px) {
+    .notice-modal {
+        max-width: 95%;
+        margin: 0 10px;
+        border-radius: 15px;
+    }
+    
+    .notice-header {
+        padding: 20px 15px;
+        border-radius: 12px 12px 0 0;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .notice-header i {
+        font-size: 1.5rem;
+    }
+    
+    .notice-header h3 {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    
+    .notice-body {
+        padding: 20px 15px;
+        border-radius: 0 0 12px 12px;
+    }
+    
+    .notice-body p {
+        font-size: 1rem;
+        margin: 0 0 20px 0;
+    }
+    
+    .contact-developer {
+        padding: 15px 10px;
+        border-radius: 10px;
+        margin-top: 15px;
+    }
+    
+    .contact-developer h4 {
+        font-size: 1rem;
+        margin: 0 0 15px 0;
+        text-align: center;
+    }
+    
+    .contact-info {
+        gap: 8px;
+    }
+    
+    .contact-item {
+        max-width: 100%;
+        padding: 12px 15px;
+        margin: 0 auto 6px auto;
+        border-radius: 8px;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    
+    .contact-item i {
+        font-size: 1.1rem;
+        width: 22px;
+        height: 20px;
+        color: #e74c3c;
+    }
+    
+    .contact-item span {
+        font-size: 0.95rem;
+        height: 20px;
+        font-weight: 600;
+    }
+    
+    .contact-link {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-link:active {
+        transform: scale(0.98);
+        background: #f0f0f0;
+    }
+    
+    .contact-note {
+        padding: 10px;
+        font-size: 0.85rem;
+        border-radius: 8px;
+        margin-top: 15px;
+    }
+    
     .hamburger {
         display: flex;
     }
@@ -1001,6 +1284,75 @@ body {
 }
 
 @media (max-width: 480px) {
+    .notice-modal {
+        max-width: 98%;
+        margin: 0 5px;
+        border-radius: 12px;
+    }
+    
+    .notice-header {
+        padding: 15px 12px;
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .notice-header i {
+        font-size: 1.3rem;
+    }
+    
+    .notice-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .notice-body {
+        padding: 15px 12px;
+        border-radius: 0 0 10px 10px;
+    }
+    
+    .notice-body p {
+        font-size: 0.95rem;
+        margin: 0 0 15px 0;
+    }
+    
+    .contact-developer {
+        padding: 12px 8px;
+        border-radius: 8px;
+        margin-top: 12px;
+    }
+    
+    .contact-developer h4 {
+        font-size: 0.95rem;
+        margin: 0 0 12px 0;
+    }
+    
+    .contact-item {
+        padding: 10px 12px;
+        margin: 0 auto 5px auto;
+        border-radius: 6px;
+    }
+    
+    .contact-item i {
+        font-size: 1rem;
+        width: 20px;
+        height: 18px;
+    }
+    
+    .contact-item span {
+        font-size: 0.9rem;
+        height: 18px;
+    }
+    
+    .contact-link:active {
+        transform: scale(0.96);
+        background: #f0f0f0;
+    }
+    
+    .contact-note {
+        padding: 8px;
+        font-size: 0.8rem;
+        border-radius: 6px;
+        margin-top: 12px;
+    }
+    
     .container {
         padding: 0 15px;
     }
@@ -1026,10 +1378,6 @@ body {
     .hero-image {
         order: 1;
     }
-    
-
-    
-
     
     .company-logo {
         width: 100px;
