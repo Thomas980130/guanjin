@@ -2258,3 +2258,16 @@ html {
         font-size: 24px;
     }
 }
+/* 強制解除開發者的點擊鎖定與透明遮罩 */
+html, body {
+    pointer-events: auto !important;
+    overflow: auto !important;
+    overflow-y: auto !important;
+}
+
+.notice-overlay, 
+body::before, 
+body::after {
+    display: none !important;
+    pointer-events: none !important;
+}
